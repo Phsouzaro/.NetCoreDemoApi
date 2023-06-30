@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
@@ -8,10 +8,17 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.7" />
+	  <!--Needed for ORM-->
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.8" />
+	  <!--Needed for JWT-->
+    <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="6.31.0" />
+	  <!--Needed for DBConnection-->
     <PackageReference Include="Npgsql" Version="7.0.4" />
+	  <!--Needed for DBConnection-->
     <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="7.0.4" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+	  <!--Needed for JWT-->
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.31.0" />
   </ItemGroup>
 
   <ItemGroup>
