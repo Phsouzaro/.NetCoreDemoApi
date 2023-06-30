@@ -21,5 +21,7 @@ namespace DemoWebApi.Model
             this.photo = photo;
         }
 
+        public Employee() { }
+
     }
 }

@@ -7,6 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+	  <!--Needed for config JWT in Program.cs-->
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="7.0.8" />
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.7" />
 	  <!--Needed for ORM-->
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.8" />
