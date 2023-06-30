@@ -1,6 +1,7 @@
 ﻿using DemoWebApi.Model;
 using DemoWebApi.Repository;
 using DemoWebApi.ViewModel;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace DemoWebApi.Controllers
@@ -17,6 +18,7 @@ namespace DemoWebApi.Controllers
             _employeeRepository = employeeRepository ?? throw new ArgumentNullException();
         }
 
+        [Authorize]
         [HttpPost]
         public IActionResult Add([FromForm] EmployeeViewModel employeeView)
         {
@@ -32,6 +34,7 @@ namespace DemoWebApi.Controllers
             return Ok();
         }
 
+        [Authorize]
         [HttpGet]
         public IActionResult GetAll()
         {
@@ -40,6 +43,7 @@ namespace DemoWebApi.Controllers
             return Ok(listaEmployee);
         }
 
+        [Authorize]
         [HttpPost]
         [Route("/{id}/download")]
         public IActionResult DownloadPhoto(int id)
